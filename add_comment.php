@@ -1,8 +1,9 @@
 <?php
+include "connect.php";
+
 session_start();
 //add_comment.php
 
-$connect = new PDO('mysql:host=localhost;dbname=cozyshelter', 'root', 'abc@123abc');
 
 $error = '';
 $comment_name = '';
@@ -37,7 +38,7 @@ if($error == '')
  (parent_comment_id, comment, comment_sender_name)
  VALUES (:parent_comment_id, :comment, :comment_sender_name)
  ";
- $statement = $connect->prepare($query);
+ $statement = $conn->prepare($query);
  $statement->execute(
   array(
    ':parent_comment_id' => $_POST["comment_id"],

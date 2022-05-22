@@ -4,8 +4,8 @@ include "connect.php";
 
 $sql = "SELECT * FROM shelter_form";
 $sql1 = "SELECT * FROM user";
-$result = mysqli_query($link,$sql);
-$result1 = mysqli_query($link,$sql1);
+$result = mysqli_query($conn,$sql);
+$result1 = mysqli_query($conn,$sql1);
 
 ?>
 <html>

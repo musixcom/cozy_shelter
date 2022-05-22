@@ -5,7 +5,7 @@
 
     $sql = "DELETE FROM shelter_form WHERE id ='$ids'";
 
-    $result =mysqli_query($link,$sql);
+    $result =mysqli_query($conn,$sql);
 
     if($result){
         // echo"Shelter Deleted Successfully!";
@@ -14,7 +14,7 @@
              window.location.href="view.php";
              </script>';
     }else{
-      echo "ERROR:" .$sql."<br>".$link->error;
+      echo "ERROR:" .$sql."<br>".$conn->error;
     }
 
   }
@@ -22,7 +22,7 @@
       $mail = $_GET['mail'];
 
       $sql1 = "DELETE FROM user WHERE email ='$mail'";
-      $result1 =mysqli_query($link,$sql1);
+      $result1 =mysqli_query($conn,$sql1);
       if($result1){
           // echo"Shelter Deleted Successfully!";
           // header("Location: view.php");
@@ -30,7 +30,7 @@
                window.location.href="view.php";
                </script>';
       }else{
-        echo "ERROR:" .$sql."<br>".$link->error;
+        echo "ERROR:" .$sql."<br>".$conn->error;
       }
   }
 ?>

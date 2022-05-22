@@ -1,14 +1,12 @@
 
 <?php
+include "connect.php";
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "abc@123abc";
-$dbname = "cozyshelter";
 
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
+
+
+
 
 // Check connection
 if (!$conn) {
@@ -41,6 +39,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['status']=1;
         if ($row['username'] == "admin") {
           header('Location: view.php');
+          $_SESSION['status']=0;
         }
 
       }else {

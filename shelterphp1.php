@@ -69,9 +69,9 @@ $image =$fileName;
 
 $sql="INSERT INTO shelter_form(petname, age, pets, breed, location, no, note, image) VALUES('$petname','$age', '$pets', '$breed', '$location','$no','$note','$image')";
 
-if(!$result = $link->query($sql)) {
+if(!$result = $conn->query($sql)) {
 
-  echo '<script language="javascript">alert("Pleace check the characters![' .$link->error. ']");
+  echo '<script language="javascript">alert("Pleace check the characters![' .$conn->error. ']");
   window.location.href="find a shelter.html";
   </script>';
 
@@ -89,5 +89,5 @@ else{
   window.location.href="find a shelter.html";
   </script>';
 }
-mysqli_close($link);
+mysqli_close($conn);
 ?>

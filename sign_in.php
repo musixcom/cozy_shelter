@@ -1,12 +1,7 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "abc@123abc";
-$dbname = "cozyshelter";
+include "connect.php";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
 
 // Check connection
 if (!$conn) {
@@ -21,8 +16,8 @@ if (isset($_POST['submit'])) {
     else {
 
         $name=$_POST['uname'];
-        $email=md5($_POST['email']);
-        $pwd=$_POST['pwd'];
+        $email=$_POST['email'];
+        $pwd=md5($_POST['pwd']);
 
         $query1 = "SELECT email FROM user WHERE email='$email'";
 

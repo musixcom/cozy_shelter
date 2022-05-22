@@ -1,10 +1,11 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <?php
-
+//include "connect.php";
+$connect = new PDO('mysql:host=localhost;dbname=cozyshelter', 'root', '1234');
 //fetch_comment.php
 
-$connect = new PDO('mysql:host=localhost;dbname=cozyshelter', 'root', 'abc@123abc');
+
 
 $query = "
 SELECT * FROM tbl_comment

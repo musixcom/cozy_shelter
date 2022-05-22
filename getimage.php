@@ -1,4 +1,5 @@
-<?php foreach($food as $f){ ?>
+<?php 
+foreach($food as $f){ ?>
                 <div class="row">
                     <div class="col-sm-3 box">
                         <img src="../public/uploads/<?php echo $f['img']; ?>" alt="<?php echo $f['name']; ?>" class="img-fluid">
