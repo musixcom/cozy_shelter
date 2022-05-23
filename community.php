@@ -10,58 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/community.css">
   
-
+    <link rel="stylesheet" type="text/css" href="css/communitystyle.css">
 </head>
 <body>
-  <style type="text/css">
-    .card {
-padding: 2% 7%;
-color: #646771;
-background-color: #2A2424;
-}
-
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0
-}
-
-ul>li {
-padding: 4px
-}
-
-ul>li:hover {
-color: #957bda;
-cursor: pointer
-}
-
-hr {
-border-width: 3px
-}
-
-.social>i {
-padding: 1%;
-font-size: 15px
-}
-
-.social>i:hover {
-color: #957bda;
-cursor: pointer
-}
-
-.policy>div {
-padding: 4px
-}
-
-.heading {
-font-family: 'Titillium Web', sans-serif;
-color: #C89D5C;
-}
-
-.divider {
-border-top: 2px solid rgba(189, 196, 203, 0.5);
-}
-  </style>
+ 
 	<div class="header">
 		<nav class="navbar navbar-expand-lg navbar-light bg-darkgray" style="background-color: #2A2424;">
               <div class="container-fluid">

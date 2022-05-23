@@ -1,15 +1,14 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <?php
-//include "connect.php";
-$connect = new PDO('mysql:host=localhost;dbname=cozyshelter', 'root', '1234');
+
 //fetch_comment.php
 
-
+$connect = new PDO('mysql:host=localhost;dbname=cozyshelter', 'root', '1234');
 
 $query = "
-SELECT * FROM tbl_comment
-WHERE parent_comment_id = '0'
+SELECT * FROM tbl_comment 
+WHERE parent_comment_id = '0' 
 ORDER BY comment_id DESC
 ";
 
@@ -21,7 +20,7 @@ $result = $statement->fetchAll();
 $output = '';
 foreach($result as $row)
 {
-
+    
  $output .= '
  <div class="panel panel-default" style="background-color: #99A799; margin-top: 5px; border-radius: 6px; padding: 10px;">
   <div class="panel-heading"><b>'.$row["comment_sender_name"].'</b> on <i style="font-size: 13px">'.$row["date"].'</i></div>
