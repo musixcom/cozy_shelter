@@ -1,4 +1,4 @@
-<?php
+	<?php
 	include 'login.php';
 ?>
 
@@ -21,7 +21,8 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   
 </head>
-<body >
+<body>
+
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 ml-2">
@@ -105,7 +106,7 @@
 					<p id="fn">
 						THE BEST THERAPIST<br>HAS FUR AND<br>FOUR LEGS
 					</p>
-				<button type="button" class="btn btn-info" onclick="document.location='registration.html'">MAKE A FRIEND</button>
+				<button type="button" id="signin" class="btn btn-info" onclick="document.location='registration.html'">MAKE A FRIEND</button>
 			</div>
 			<div class="col-sm-5 offset-1 p-5">
 				<img src="resources/home.png">
@@ -187,12 +188,16 @@
         function buttonset(){
         		var lgin = document.getElementById("login");
         		var lgout = document.getElementById("logout");
+        		var sign=document.getElementById("signin");
 					  if (lgout.style.display === "none") {
 					    lgout.style.display = "block";
 					    lgin.style.display = "none";
+					    sign.style.display = "none";
+
 					  } else {
 					    lgout.style.display = "none";
 					    lgin.style.display = "block";
+					    sign.style.display = "block";
 					  }
         }
 

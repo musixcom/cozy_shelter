@@ -37,7 +37,10 @@ if (isset($_POST['submit'])) {
 
         }
         else{
-          $_SESSION['message'] = "This email is alread registerd try another Email";
+          $messege = "This email is alread registerd try another Email";
+          echo '<script type="text/javascript">alert("' . $messege . '");
+                window.location.href="registration.html";
+                </script>';
         }
 
          if (isset($_SESSION['message'])) {
