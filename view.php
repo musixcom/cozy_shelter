@@ -15,9 +15,13 @@ $result1 = mysqli_query($conn,$sql1);
 
 	</head>
 	<body>
-		<dvi class="container">
+		<div style="display:table;float: right; margin:10px;">
+			<button class="btn btn-primary" onclick="window.location.href = 'logout.php';">logout</button>
+		</div>
+		
+		<div class="container" style="border: 2px solid skyblue; display: table;margin-top: 40px;clear: both; border-radius: 15px;">
 		<center><h2>Pets Details</h2></center>
-				<table class="table">
+				<table class="table table-hover">
 					<head>
 						<tr>
 							<th>ID</th>
@@ -48,8 +52,7 @@ $result1 = mysqli_query($conn,$sql1);
 								<td><?php echo $row['no']; ?></td>
 								<td><?php echo $row['note']; ?></td>
 								<td><?php echo $row['image']; ?></td>
-								<td><a class="btn btn-info" href="update.php?id=<?php echo $row['id'];?>">
-									edit</a>&nbsp;<a class="btn btn-danger" href="delete.php?id=<?php echo $row['id'];?>">
+								<td><a class="btn btn-danger" href="delete.php?id=<?php echo $row['id'];?>">
 										delete</a><td>
 										</tr>
 									<?php }
@@ -59,9 +62,9 @@ $result1 = mysqli_query($conn,$sql1);
 								</tbody>
 							</table>
 						</div>
-						<dvi class="container">
+						<dvi class="container" style="border: 2px solid skyblue; display: table; margin-top: 20px;border-radius: 15px">
 						<center><h2>User Details</h2></center>
-								<table class="table">
+								<table class="table table-hover">
 									<head>
 										<tr>
 											<th>userName</th>
@@ -80,8 +83,7 @@ $result1 = mysqli_query($conn,$sql1);
 												<td><?php echo $row['username']; ?></td>
 												<td><?php echo $row['email']; ?></td>
 												<td><?php echo $row['password']; ?></td>
-												<td><a class="btn btn-info" href="update.php?mail=<?php echo $row['email'];?>">
-													edit</a>&nbsp;<a class="btn btn-danger" href="delete.php?mail=<?php echo $row['email'];?>">
+												<td><a class="btn btn-danger" href="delete.php?mail=<?php echo $row['email'];?>">
 														delete</a><td>
 														</tr>
 													<?php }
