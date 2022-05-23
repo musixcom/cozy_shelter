@@ -37,17 +37,17 @@ if (isset($_POST['submit'])) {
         $row = $result->fetch_assoc();
         $_SESSION['username']=$row["username"];
         $_SESSION['status']=1;
-        if ($row['username'] == "admin") {
+        if ($row['email'] == "admin@gmail.com") {
           header('Location: view.php');
           $_SESSION['status']=0;
         }
 
       }else {
-        $_SESSION['message'] = "check email and password again!";
+        $_SESSION['message'] = "check your email and password again!";
 
       }
       if (isset($_SESSION['message'])) {
-           echo '<script type="text/javascript">alert("Hello '.$_SESSION['username'].' your ' . $_SESSION['message'] . '");
+           echo '<script type="text/javascript">alert("Hello '.$_SESSION['username'].' ' . $_SESSION['message'] . '");
                 window.location.href="index.php";
                 </script>';
             unset($_SESSION['message']);
