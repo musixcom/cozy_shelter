@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `cozyshelter` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `cozyshelter`;
--- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
 --
 -- Host: localhost    Database: cozyshelter
 -- ------------------------------------------------------
--- Server version	8.0.25
+-- Server version	8.0.29
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,8 +32,10 @@ CREATE TABLE `shelter_form` (
   `location` varchar(50) NOT NULL,
   `no` bigint DEFAULT NULL,
   `note` text,
-  `image` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `image` varchar(250) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +44,7 @@ CREATE TABLE `shelter_form` (
 
 LOCK TABLES `shelter_form` WRITE;
 /*!40000 ALTER TABLE `shelter_form` DISABLE KEYS */;
-INSERT INTO `shelter_form` VALUES ('niki',1,'cat','pesian','galle',763496333,'not special','png-transparent-cats-and-dogs-love-each-other-golden-kitty-kiss.png'),('sandy',4,'dog','german Shepard','colombo',7684845246,'   he is a good boy','download.jpg');
+INSERT INTO `shelter_form` VALUES ('niki',1,'cat','pesian','galle',763496333,'good girl','png-transparent-cats-and-dogs-love-each-other-golden-kitty-kiss.png',1),('sandy',4,'dog','german Shepard','colombo',7684845246,'   he is a good boy','download.jpg',2);
 /*!40000 ALTER TABLE `shelter_form` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +96,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('deshan','rravindur@gmail.com','1245'),('tharukee','tharukee@gmail.com','1111');
+INSERT INTO `user` VALUES ('admin','admin@gmail.com','b59c67bf196a4758191e42f76670ceba'),('deshan','rravindur@gmail.com','81dc9bdb52d04dc20036dbd8313ed055');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -107,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-02 21:32:39
+-- Dump completed on 2022-05-23  3:18:36
