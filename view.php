@@ -69,7 +69,7 @@ $result1 = mysqli_query($conn,$sql1);
 										<tr>
 											<th>userName</th>
 											<th>Email</th>
-											<th>Password</th>
+											<!-- <th>Password</th> -->
 										</tr>
 									</thread>
 									<tbody>
@@ -82,7 +82,7 @@ $result1 = mysqli_query($conn,$sql1);
 											<tr>
 												<td><?php echo $row['username']; ?></td>
 												<td><?php echo $row['email']; ?></td>
-												<td><?php echo $row['password']; ?></td>
+												<!-- <td><?php echo $row['password']; ?></td> -->
 												<td><a class="btn btn-danger" href="delete.php?mail=<?php echo $row['email'];?>">
 														delete</a><td>
 														</tr>
