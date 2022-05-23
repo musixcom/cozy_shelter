@@ -80,6 +80,19 @@ $result = mysqli_query($conn,$sql);
             .button:hover {
               background-color: #555;
             }
+            #cll {
+              border: 1px solid #6c5ce7;
+              padding: 1 25;
+              border-radius: .2em;
+              background-color: #a29bfe;
+              transition: 1s;
+            }
+
+            #cll:hover {
+            background-color: #81ecec;
+            border: 2px solid #00cec9;
+            }
+
 
         </style>
 
@@ -137,13 +150,13 @@ $result = mysqli_query($conn,$sql);
                         <img src="upload/<?php echo $r['image']; ?>" style="width: 350px; height: 350px; border-radius: 6px;">
                      </div>
                      <div class="content">
-                        <h3><?php echo $r['petname']; ?></h3>
+                        <p><h3><?php echo $r['petname']; ?></h3>
                         <h4 style="color:lightgray;">Breed: <?php echo $r['breed']; ?></h4><br>
                         <p>Age:<?php echo $r['age']; ?><br>
                         Cat or dog: <?php echo $r['pets']; ?><br>
-                        Contact Number: <?php echo $r['no']; ?><br>
                         Location: <?php echo $r['location']; ?><br>
-                        Special notes:<?php echo $r['note']; ?><br>
+                        Special notes:<?php echo $r['note']; ?><br><br>
+                        <button id="cll">Call Now: <?php echo $r['no']; ?></a></button><br>
                       </p>
                      </div>
                    </div>
