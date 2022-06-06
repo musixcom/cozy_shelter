@@ -1,7 +1,10 @@
 <?php
 //validation
+session_start();
 require_once("connect.php");
 //InvalidArgumentException
+if ($_SESSION['status']) {
+    
 
 $target_dir = "upload/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -64,10 +67,10 @@ $location =$_POST['loc'];
 $pets =$_POST['pets'];
 $note =$_POST['note'];
 $image =$fileName;
+$uname = $_SESSION['username'];
 
 
-
-$sql="INSERT INTO shelter_form(petname, age, pets, breed, location, no, note, image) VALUES('$petname','$age', '$pets', '$breed', '$location','$no','$note','$image')";
+$sql="INSERT INTO shelter_form(petname, age, pets, breed, location, no, note, image,username) VALUES('$petname','$age', '$pets', '$breed', '$location','$no','$note','$image','$uname')";
 
 if(!$result = $conn->query($sql)) {
 
@@ -86,6 +89,12 @@ else {
 }
 else{
   echo '<script language="javascript">alert("All require fields must be fill!");
+  window.location.href="find a shelter.html";
+  </script>';
+}
+}
+else{
+    echo '<script language="javascript">alert("user must be login first!");
   window.location.href="find a shelter.html";
   </script>';
 }

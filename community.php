@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/community.css">
-  
+
     <link rel="stylesheet" type="text/css" href="css/communitystyle.css">
 </head>
 <body>
- 
+
 	<div class="header">
 		<nav class="navbar navbar-expand-lg navbar-light bg-darkgray" style="background-color: #2A2424;">
               <div class="container-fluid">
@@ -48,7 +48,7 @@
                 </div>
               </div>
             </nav>
-	</div> 
+	</div>
  <div class="heading" style=" text-align: center; padding: 10px; margin: auto;
     width: 800px;height: auto; margin-top: 10px; background-color: white; border-radius: 5px;">
    <h2>SHARE YOUR IDEAS WITH THE COMMUNITY</h2>
@@ -66,13 +66,14 @@
      <span id="comment_message"></span>
     </div>
    </form>
-   
+
   </div>
 
       <!--footer-->
+			<div class="footback"style="background-color: #2A2424;">
     <div class="container-fluid mt-5">
-    <div class="card mx-6">
-        <div class="row mb-2 ">
+    <div class="card mx-6"background-color:"#2A2424;">
+        <div class="row mb-2">
             <div class="col-md-3 col-sm-11 col-xs-11">
                 <div class="footer-text pull-left">
                     <div class="d-flex">
@@ -115,6 +116,7 @@
         </div>
     </div>
 </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
@@ -129,7 +131,7 @@
 
 <script>
 $(document).ready(function(){
- 
+
  $('#comment_form').on('submit', function(event){
   event.preventDefault();
   var form_data = $(this).serialize();
@@ -170,6 +172,6 @@ $(document).ready(function(){
   $('#comment_id').val(comment_id);
   $('#comment_content').focus();
  });
- 
+
 });
 </script>

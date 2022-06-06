@@ -129,7 +129,7 @@
         const password = document.getElementById('password');
 
         form.addEventListener('submit', e => {
-
+       
           if (!checkInputs()) {
           e.preventDefault();
           e.stopPropagation();
@@ -137,7 +137,10 @@
           
         });
 
+      
+
         function checkInputs() {
+
           // trim to remove the whitespaces
           
           const emailValue = email.value.trim();
@@ -202,10 +205,21 @@
         }
 
         window.onload = function () {
+
+        	<?php 
+        		if(!empty($_SESSION['status'])){
+
+        	
+        	?>
         	var status = '<?php echo $_SESSION['status'];?>';
         	if (status==1) {
         		buttonset();
         	}
+
+        	<?php
+
+        }
+        	 ?>
         	
         }
 

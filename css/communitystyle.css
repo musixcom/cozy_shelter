@@ -1,10 +1,13 @@
- <style type="text/css">
-    .card {
+
+ .card {
 padding: 2% 7%;
 color: #646771;
 background-color: #2A2424;
 }
+.footback{
+background-color: #2A2424;
 
+}
 ul {
 list-style-type: none;
 margin: 0;
@@ -46,4 +49,3 @@ color: #C89D5C;
 .divider {
 border-top: 2px solid rgba(189, 196, 203, 0.5);
 }
-  </style>
