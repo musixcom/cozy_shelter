@@ -15,7 +15,7 @@ $result = mysqli_query($conn,$sql);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our Pets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<!--    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -156,7 +156,8 @@ $result = mysqli_query($conn,$sql);
                         Cat or dog: <?php echo $r['pets']; ?><br>
                         Location: <?php echo $r['location']; ?><br>
                         Special notes:<?php echo $r['note']; ?><br><br>
-                        <button id="cll">Call Now: <?php echo $r['no']; ?></a></button><br>
+                        <button id="cll">Call Now: <?php echo $r['no']; ?></a></button>
+                        <a href="user_dashboard.php"><div  class="btn btn-danger"style="border-radius: 5px;">Update</div></a>
                       </p>
                      </div>
                    </div>
