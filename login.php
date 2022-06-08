@@ -52,9 +52,7 @@ if (isset($_POST['submit'])) {
                 </script>';
             unset($_SESSION['message']);
 
-
       }
-
 
 
     }

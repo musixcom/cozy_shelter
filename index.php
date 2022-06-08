@@ -19,7 +19,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
   <!-- main css -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  
+
 </head>
 <body>
 
@@ -82,7 +82,7 @@
 						          <form id="form" class="form" action="login.php" method="post">
 						            <div class="form-control">
 						              <input type="email"  id="email" name="email" placeholder="Your email address...">
-					
+
           								<small>Error message</small>
 						            </div>
 						            <div class="form-control">
@@ -97,7 +97,7 @@
 						      <div class="modal-footer d-flex justify-content-center">
 						        <div class="signup-section">Not a member yet? <a href="registration.html" class="text-info"> Sign Up</a>.</div>
 						      </div>
-						    </div> 
+						    </div>
 						  </div>
 						</div>
 		</div>
@@ -111,16 +111,16 @@
 			<div class="col-sm-5 offset-1 p-5">
 				<img src="resources/home.png">
 			</div>
-			
+
 		</div>
-	
+
 	<!-- jQuery -->
   <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
   <!-- Popper JS -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
   <!-- Bootstrap JS -->
   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-   <!-- Custom Script -->      
+   <!-- Custom Script -->
 <!--   <script  src="js/script.js"></script> -->
 
 	<script type="text/javascript">
@@ -134,7 +134,7 @@
           e.preventDefault();
           e.stopPropagation();
           }
-          
+
         });
 
       
@@ -142,13 +142,13 @@
         function checkInputs() {
 
           // trim to remove the whitespaces
-          
+
           const emailValue = email.value.trim();
           const passwordValue = password.value.trim();
-          
+
           let factor = true;
 
-          
+
           if(emailValue === '') {
             setErrorFor(email, 'Email cannot be blank');
             factor = false;
@@ -159,7 +159,7 @@
             setSuccessFor(email);
             factor = true;
           }
-          
+
           if(passwordValue === '') {
             setErrorFor(password, 'Password cannot be blank');
             factor = false;
@@ -167,7 +167,7 @@
             setSuccessFor(password);
             factor = true;
           }
-          
+
 
           return factor;
         }
@@ -183,7 +183,7 @@
           const formControl = input.parentElement;
           formControl.className = 'form-control success';
         }
-          
+
         function isEmail(email) {
           return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
         }
@@ -216,11 +216,14 @@
         		buttonset();
         	}
 
+<<<<<<< Updated upstream
         	<?php
 
         }
         	 ?>
         	
+=======
+>>>>>>> Stashed changes
         }
 
 	</script>
